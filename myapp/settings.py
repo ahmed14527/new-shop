@@ -134,12 +134,10 @@ REST_FRAMEWORK = {
 
 SWAGGER_SETTINGS = {
     'SECURITY_DEFINITIONS': {
-        # If your API requires authentication, provide the necessary configuration here
         'Bearer': {
             'type': 'apiKey',
             'name': 'Authorization',
-            'scheme': 'Bearer',
-            'in': 'header',
+            'in': 'header'
         },
     },
     'USE_SESSION_AUTH': False,  # If using token-based authentication
