@@ -134,11 +134,22 @@ REST_FRAMEWORK = {
 
 SWAGGER_SETTINGS = {
     'SECURITY_DEFINITIONS': {
+        # If your API requires authentication, provide the necessary configuration here
         'Bearer': {
             'type': 'apiKey',
             'name': 'Authorization',
-            'in': 'header'
+            'scheme': 'Bearer',
+            'in': 'header',
         },
     },
     'USE_SESSION_AUTH': False,  # If using token-based authentication
 }
+
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:8000',  # Add your local development server URL
+    'https://my-store-vjkc.onrender.com',  # Add your Render app URL
+    # Add more allowed origins if needed
+]
