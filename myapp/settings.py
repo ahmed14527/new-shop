@@ -142,7 +142,7 @@ SWAGGER_SETTINGS = {
             'in': 'header',
         },
     },
-    'USE_SESSION_AUTH': False,  # If using token-based authentication
+    'USE_SESSION_AUTH': True,  # If using token-based authentication
 }
 
 
